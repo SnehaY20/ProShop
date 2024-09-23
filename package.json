@@ -1,0 +1,37 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "eCommerce application built with the MERN stack.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SnehaY20/ProShop.git"
+  },
+  "author": "Sneha Yadav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SnehaY20/ProShop/issues"
+  },
+  "homepage": "https://github.com/SnehaY20/ProShop#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.7"
+  }
+}
